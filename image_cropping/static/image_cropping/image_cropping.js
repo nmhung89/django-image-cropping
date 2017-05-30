@@ -41,7 +41,8 @@ var image_cropping = (function ($) {
 
         var $image = $('<img>', {
           'id': image_id,
-          'src': $image_input.data('thumbnail-url')
+          'src': $image_input.data('thumbnail-url'),
+          'width': '600px'
         });
 
         var options = {
