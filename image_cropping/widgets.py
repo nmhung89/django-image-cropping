@@ -54,7 +54,7 @@ def get_attrs(image, name):
             height = image.height
         return {
             'class': "crop-thumb",
-            'data-thumbnail-url': image.url + '?no_cache=' + uuid.uuid4().get_hex(),
+            'data-thumbnail-url': image.url + '?no_cache=' + uuid.uuid4().hex,
             'data-field-name': name,
             'data-org-width': width,
             'data-org-height': height,
