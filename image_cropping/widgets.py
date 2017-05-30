@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import logging
+import uuid
 
 from django import forms
 from django.contrib.admin.templatetags import admin_static
@@ -53,7 +54,7 @@ def get_attrs(image, name):
             height = image.height
         return {
             'class': "crop-thumb",
-            'data-thumbnail-url': image.url,
+            'data-thumbnail-url': image.url + '?no_cache=' + uuid.uuid4().get_hex(),
             'data-field-name': name,
             'data-org-width': width,
             'data-org-height': height,
