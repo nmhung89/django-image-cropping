@@ -53,7 +53,7 @@ def get_attrs(image, name):
             height = image.height
         return {
             'class': "crop-thumb",
-            'data-thumbnail-url': thumbnail_url(image),
+            'data-thumbnail-url': settings.MEDIA_URL + image,
             'data-field-name': name,
             'data-org-width': width,
             'data-org-height': height,
