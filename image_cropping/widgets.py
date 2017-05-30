@@ -26,7 +26,7 @@ def thumbnail_url(image_path):
         'upscale': True,
         'size': settings.IMAGE_CROPPING_THUMB_SIZE,
     }
-    return get_backend().get_thumbnail_url(image_path, thumbnail_options)
+    return image_path
 
 
 def get_attrs(image, name):
